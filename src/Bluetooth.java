@@ -18,6 +18,7 @@ public class Bluetooth extends Thread {
     private PrintWriter pWriter;
     private DataOutputStream dos;
     private InputStream inStream;
+
     Bluetooth(Label status,String deviceName, ObservableList<String> terminalOut){
         this.status = status;
         this.deviceName = deviceName;

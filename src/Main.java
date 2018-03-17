@@ -33,7 +33,7 @@ public class Main  extends Application {
 
         // Create, Initialize and show the stage
         primaryStage.setScene(mainScene);
-        primaryStage.setTitle("Joggle Cube");
+        primaryStage.setTitle("Bluetooth Serial Terminal");
         primaryStage.setResizable(false);
 
 
