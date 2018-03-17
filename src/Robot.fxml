@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+
+<?import test.* ?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text="Robot IR Sensors"/>
+    <GridPane prefHeight="100" prefWidth="100"
+              alignment="center" hgap="10" vgap="10">
+        <Label fx:id="r00" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label fx:id="r10" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label fx:id="r20" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <Label fx:id="r01" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label fx:id="r21" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <Label fx:id="r02" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <Label fx:id="r12" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label fx:id="r22" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+    </GridPane>
+    <Label text="Robot other Sensors"/>
+    <GridPane alignment="center" hgap="10" vgap="10">
+        <Label text="Light Sensor:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label fx:id="LS" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="Line Sensor left:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Label fx:id="LLS" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Line Sensor right:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <Label fx:id="LRS" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    </GridPane>
+    <Label text="Map"/>
+    <GridPane >
+    <CustomCell fx:id="c00" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <CustomCell fx:id="c01" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <CustomCell fx:id="c02" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <CustomCell fx:id="c03" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+    <CustomCell fx:id="c10" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <CustomCell fx:id="c11" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <CustomCell fx:id="c12" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <CustomCell fx:id="c13" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <CustomCell fx:id="c20" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+    <CustomCell fx:id="c21" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+    <CustomCell fx:id="c22" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+    <CustomCell fx:id="c23" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+
+    <CustomCell fx:id="c30" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+    <CustomCell fx:id="c31" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+    <CustomCell fx:id="c32" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+    <CustomCell fx:id="c33" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+    </GridPane>
+</VBox>

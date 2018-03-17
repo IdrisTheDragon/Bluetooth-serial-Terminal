@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<fx:root type="VBox" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.121">
+    <children>
+        <GridPane>
+            <Label fx:id="l" text="120" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Rectangle  fx:id="west" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="10.0" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Rectangle  fx:id="east" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <Rectangle  fx:id="north" fill="DODGERBLUE" height="10.0" stroke="BLACK" strokeType="INSIDE" width="30.0" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Rectangle  fx:id="south" fill="DODGERBLUE" height="10.0" stroke="BLACK" strokeType="INSIDE" width="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        </GridPane>
+    </children>
+</fx:root>

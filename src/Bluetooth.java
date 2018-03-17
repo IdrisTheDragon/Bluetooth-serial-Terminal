@@ -18,11 +18,13 @@ public class Bluetooth extends Thread {
     private PrintWriter pWriter;
     private DataOutputStream dos;
     private InputStream inStream;
+    private Robot robot;
 
-    Bluetooth(Label status,String deviceName, ObservableList<String> terminalOut){
+    Bluetooth(Label status,String deviceName, ObservableList<String> terminalOut, Robot robot){
         this.status = status;
         this.deviceName = deviceName;
         this.terminalOut = terminalOut;
+        this.robot =robot;
         enable = true;
     }
 
@@ -37,7 +39,10 @@ public class Bluetooth extends Thread {
                 while(enable){
                     if(bReader2.ready()){
                         String lineRead=bReader2.readLine();
-                        Platform.runLater(() -> terminalOut.add(0,lineRead));
+                        Platform.runLater(() -> {
+                            terminalOut.add(0,lineRead);
+                            robot.parse(lineRead);
+                        });
                     }
                 }
                 conn.close();

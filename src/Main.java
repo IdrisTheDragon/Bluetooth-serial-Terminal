@@ -39,10 +39,16 @@ public class Main  extends Application {
 
         primaryStage.show();
 
+        ViewController view = new ViewController();
+
+        primaryStage.setOnCloseRequest( e ->{
+            view.stop();
+        });
+
 
         FXMLLoader loader;
         loader = new FXMLLoader(getClass().getResource("Main.fxml"));
-        loader.setController(new ViewController());
+        loader.setController(view);
 
         loader.setRoot(loader.load());
 

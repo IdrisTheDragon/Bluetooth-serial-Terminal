@@ -2,18 +2,27 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 
 import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class ViewController {
+public class ViewController implements Initializable {
+
+    @FXML
+    private VBox displayContainer;
+
     @FXML
     private Label status;
     @FXML
@@ -24,24 +33,26 @@ public class ViewController {
     @FXML
     private Button btnConnect;
 
-    Bluetooth blue;
-
-    Thread t;
+    private Bluetooth blue;
+    private Thread t;
+    private ObservableList<String> b;
+    private Robot robot;
 
     @FXML
     private void btnConnectClicked(){
         if(btnConnect.getText().equals("Connect")){
-            ArrayList<String> a = new ArrayList<>();
-            ObservableList<String> b = FXCollections.observableArrayList(a);
-            terminalOutView.setItems(b);
-            blue = new Bluetooth(status,deviceInput.getText(),b);
+            blue = new Bluetooth(status,deviceInput.getText(),b,robot);
             blue.start();
             btnConnect.setText("Disconnect");
         } else {
-            blue.interrupt();
+            stop();
             btnConnect.setText("Connect");
         }
 
+    }
+
+    public void stop(){
+        blue.interrupt();
     }
 
     @FXML
@@ -66,5 +77,26 @@ public class ViewController {
         if (selectedFile != null) {
             blue.saveStream(selectedFile);
         }
+    }
+
+    @FXML
+    private void btnClearClicked(){
+        b.clear();
+    }
+
+    /**
+     * Called to initialize a controller after its root element has been
+     * completely processed.
+     *
+     * @param location  The location used to resolve relative paths for the root object, or
+     *                  {@code null} if the location is not known.
+     * @param resources The resources used to localize the root object, or {@code null} if
+     */
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ArrayList<String> a = new ArrayList<>();
+        b = FXCollections.observableArrayList(a);
+        terminalOutView.setItems(b);
+        robot = new Robot(displayContainer);
     }
 }

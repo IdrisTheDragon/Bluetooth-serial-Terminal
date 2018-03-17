@@ -8,19 +8,20 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
-      <HBox prefHeight="100.0" prefWidth="200.0">
+<?import javafx.scene.Group?>
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <Label prefHeight="66.0" prefWidth="179.0" text="Terminal IO" />
       </HBox>
-    <HBox prefHeight="40.0" prefWidth="600.0">
+    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
             <TextField fx:id="deviceInput" text="FA103047" />
             <Button fx:id="btnConnect" mnemonicParsing="false" onAction="#btnConnectClicked" text="Connect" />
       </HBox>
-    <HBox>
+    <HBox alignment="CENTER">
         <Label text="Status: " />
         <Label fx:id="status" text="Disconnected" />
     </HBox>
-      <HBox prefHeight="412.0" prefWidth="600.0">
+      <HBox prefHeight="412.0" prefWidth="600.0" spacing="20" alignment="CENTER">
             <VBox prefWidth="271.0">
                   <HBox prefWidth="271.0">
                         <TextField fx:id="terminalInput" />
@@ -29,6 +30,8 @@
                   <Separator prefWidth="200.0" />
                   <ListView fx:id="terminalOutView" prefHeight="230.0" prefWidth="271.0" />
                 <Button onAction="#btnSaveStreamClicked" text="Save input Stream" />
+                <Button onAction="#btnClearClicked" text="Clear"/>
             </VBox>
+          <VBox fx:id="displayContainer"/>
       </HBox>
 </VBox>
