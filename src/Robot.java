@@ -37,6 +37,32 @@ public class Robot implements Initializable {
     @FXML
     private Label LS,LLS,LRS,EL,ER;
 
+    public void clear(){
+        LS.setText("0");
+        LLS.setText("0");
+        LRS.setText("0");
+        EL.setText("0");
+        ER.setText("0");
+
+        r00.setText("0");
+        r10.setText("0");
+        r20.setText("0");
+
+        r01.setText("0");
+        r21.setText("0");
+
+        r02.setText("0");
+        r12.setText("0");
+        r22.setText("0");
+
+        for(int x = 0; x < 4; x++){
+            for(int y = 0; y < 4; y++){
+                map[x][y].setCell(true,true,true,true);
+                map[x][y].setText("120");
+            }
+        }
+    }
+
     public void parse(String lineRead) {
         switch(lineRead.charAt(0)){
             case 'S':

@@ -85,6 +85,7 @@ public class ViewController implements Initializable {
     @FXML
     private void btnClearClicked(){
         b.clear();
+        robot.clear();
     }
 
     /**
