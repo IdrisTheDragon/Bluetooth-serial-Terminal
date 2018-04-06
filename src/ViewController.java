@@ -52,7 +52,10 @@ public class ViewController implements Initializable {
     }
 
     public void stop(){
-        blue.interrupt();
+        if(blue != null){
+            blue.interrupt();
+        }
+
     }
 
     @FXML

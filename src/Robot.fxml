@@ -14,7 +14,7 @@
         <Label fx:id="r10" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
         <Label fx:id="r20" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
         <Label fx:id="r01" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-        <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label GridPane.columnIndex="1" GridPane.rowIndex="1"/>
         <Label fx:id="r21" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
         <Label fx:id="r02" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
         <Label fx:id="r12" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
@@ -28,6 +28,10 @@
         <Label fx:id="LLS" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
         <Label text="Line Sensor right:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
         <Label fx:id="LRS" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="Encoder left:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <Label fx:id="EL" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Label text="Encoder right:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <Label fx:id="ER" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
     </GridPane>
     <Label text="Map"/>
     <GridPane >
